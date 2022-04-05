@@ -23,9 +23,18 @@ What I expect in your repo:
 
 X. A readme with:   Your thoughts about the code. What makes it amazing code. Or what makes it ok code. Or what makes it terrible code. How would you have done it. Thoughts on formatting, structure, logic.. The more details that you can provide about the code (what's terrible about it or/and what is good about it) the easier for us to assess your coding style, mentality etc
 
-And 
+I am not fan of repository pattern, but it makes controller and model so much cleaner which is the good thing but nowadays, everything is doable with model and controller
+as we can add traits and many more things
+
+There is no variable checking existence which terrible and horrible and at some place fetching all records from one table is not a good practice either
 
 Y.  Refactor it if you feel it needs refactoring. The more love you put into it. The easier for us to asses your thoughts, code principles etc
+
+I've tried to refactor as much as I could there is a lot of room for improvement as I have not enough knowledge of business and proper time refactor but here are some tips
+
+there are some function in repository which are ginormous as good practice your function not exceed than 15 lines and in extreme condition max 30 or 40 excluding building an array
+and on those function readability is problem I need to parse every condition as I go through the code and lastly if you find your self doing elseif try key value array instead I did on one place in repository
+you can take a look
 
 
 IMPORTANT: Make two commits. First commit with original code. Second with your refactor so we can easily trace changes. 

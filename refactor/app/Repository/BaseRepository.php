@@ -2,6 +2,7 @@
 
 namespace DTApi\Repository;
 
+use Illuminate\Database\Eloquent\Builder;
 use Validator;
 use Illuminate\Database\Eloquent\Model;
 use DTApi\Exceptions\ValidationException;
@@ -60,10 +61,16 @@ class BaseRepository
     {
         return $this->model->find($id);
     }
-
-    public function with($array)
+    
+    /**
+     * Set the relationships that should be eager loaded.
+     *
+     * @param  string|array  $relations
+     * @return $this
+     */
+    public function with($relations)
     {
-        return $this->model->with($array);
+        return $this->model->with($relations);
     }
 
     /**
